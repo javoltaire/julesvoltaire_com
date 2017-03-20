@@ -16,11 +16,45 @@ html, body {
     align-items: center;
 }
 
+#nav{
+    list-style-type: none;
+}
+
+#nav li{
+    float: left;
+}
+
+#nav a{
+    text-decoration: none;
+    color: black;
+}
+
+#nav li a{
+    display: block;
+    text-align: center;
+    margin: 0px 10px;
+}
+
+#nav li a:hover:not(.active) {
+    color: orange;
+}
+
 .section-page{
+    margin-top: 50px;
     padding-top: 50px;
 }
 
 #home{
+    height: 100vh;
+    margin-top: 0px;
+}
+
+#projects{
+    background-color: #f2f2f2;
+    height: 100vh;
+}
+
+#contact{
     height: 100vh;
 }
 
