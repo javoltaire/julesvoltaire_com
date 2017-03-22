@@ -16,20 +16,17 @@ html, body {
     align-items: center;
 }
 
+#nav-bar a{
+    text-decoration: none;
+    color: white;
+}
+
 #nav{
     list-style-type: none;
 }
 
 #nav li{
     float: left;
-}
-
-#nav a{
-    text-decoration: none;
-    color: black;
-}
-
-#nav li a{
     display: block;
     text-align: center;
     margin: 0px 10px;
@@ -37,6 +34,14 @@ html, body {
 
 #nav li a:hover:not(.active) {
     color: orange;
+}
+
+#profile-link-container{
+    /*padding-right: 25px;*/
+}
+
+.profile-link{
+    margin: 0px 5px;
 }
 
 .section-page{
@@ -47,14 +52,22 @@ html, body {
 #home{
     height: 100vh;
     margin-top: 0px;
+    background-image: url("./images/desk-setup-4k.jpg");
+    background-size: 100% 100%;
+    color: white;
+}
+
+#greeting{
+    font-size: 300%;
+    width: 600px;
 }
 
 #projects{
-    background-color: #f2f2f2;
     height: 100vh;
 }
 
 #contact{
     height: 100vh;
+    background-color: #f2f2f2;
 }
 
