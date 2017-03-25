@@ -2,6 +2,7 @@ html, body {
     height: 100%; 
     padding: 0px;
     margin: 0px;
+    font-family: "Helvetica", "Arial", sans-serif;
 }
 
 #nav-bar{
@@ -55,11 +56,27 @@ html, body {
     background-image: url("./images/desk-setup-4k.jpg");
     background-size: 100% 100%;
     color: white;
+
+    /* Flex Box*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #greeting{
-    font-size: 300%;
-    width: 600px;
+    font-size: 200%;
+    width: 850px;
+}
+
+#greeting span{
+    font-size: 250%;
+}
+
+#home-chevron{
+    align-items: flex-end;
+    text-decoration: none;
+    color: white;
 }
 
 #projects{
