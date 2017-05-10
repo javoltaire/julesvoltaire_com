@@ -1,90 +1,226 @@
-html, body {
-    height: 100%; 
-    padding: 0px;
-    margin: 0px;
-    font-family: "Helvetica", "Arial", sans-serif;
+/*Variables*/
+:root{
+    --back-color: #fafafa;
+    --fore-color: #262626;
+    --accent-color: orange;
 }
 
-#nav-bar{
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: 50px;
-    
-    /*Flex*/
+/*Hide the scrollbar*/
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+html, body {
+    /*Other properties*/
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    font-family: "Helvetica", "Arial", "sans-serif";
+    background: var(--back-color);
+    color: var(--fore-color);
+}
+
+body{
+    /*Flex as parent*/
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar{
+    background: greenyellow;
+    /*Flex as child*/
+    flex: 0 0 auto;
+    /*Other properties*/
+    padding: 0 20px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: var(--fore-color);
+    /*Flex as parent*/
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#nav-bar a{
+a{
     text-decoration: none;
-    color: white;
+    color: var(--fore-color);
 }
 
-#nav{
+a:hover{
+    color: var(--accent-color);
+}
+
+#logo{
+
+}
+
+#navbar-menu-container{
+    /*Flex as child*/
+    flex-basis: 20rem;
+    /*Other properties*/
     list-style-type: none;
-}
-
-#nav li{
-    float: left;
-    display: block;
-    text-align: center;
-    margin: 0px 10px;
-}
-
-#nav li a:hover:not(.active) {
-    color: orange;
+    padding: 0;
+    /*Flex as parent*/
+    display: flex;
+    justify-content: space-between;
 }
 
 #profile-link-container{
-    padding-right: 25px;
+    /*Flex as child*/
+    flex-basis: 5rem;
+
+    /*Flex as parent*/
+    display: flex;
+    justify-content: space-between;
 }
 
-.profile-link{
-    margin: 0px 5px;
-}
+#content-wrapper{
+    /*Flex as child*/
+    flex: 1 1 auto;
 
-.section-page{
-    margin-top: 50px;
-    padding-top: 50px;
+    /*Other properties*/
+    overflow-y: auto;
 }
 
 #home{
-    height: 100vh;
-    margin-top: 0px;
-    background-image: url("./images/desk-setup-4k.jpg");
-    background-size: 100% 100%;
-    color: white;
+    background: red;
 
-    /* Flex Box*/
+   /*Flex as child*/
+   height: 96vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#greeting{
-    font-size: 200%;
-    width: 850px;
+#home-content{
+    margin: auto;
+    
+    /*Flez as parent*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#greeting span{
-    font-size: 250%;
+#home-content h1{
+    font-size: 300%;
+    line-height: 10%;
+    color: var(--accent-color);
 }
 
-#home-chevron{
-    align-items: flex-end;
-    text-decoration: none;
-    color: white;
+#home-content h3{
+    font-size: 125%;
+    line-height: 10%;
+}
+
+#home-footer{
+    /*Flez as parent*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*Other properties*/
+    line-height: 0;
+    margin: 20px;
+}
+
+.section-title{
+    border-width: 0 0 5px 0;
+    border-color: var(--accent-color);
+    border-style: solid;
+}
+
+#about{
+   background: pink;
+
+   /*Flex as parent*/
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#about-content{
+    /*Flex as parent*/
+    display: flex;
+    align-items: center;
+}
+
+#about-message{
+    margin: 50px 20%;
+}
+
+#about-photo{
+    /*Flex as child*/
+    flex: 0 0 20rem;
+}
+
+#skills{
+   background: purple;
+
+   /*Flex as parent*/
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#skill-box-container{
+    background: lightsalmon;
+    /*Flex as parent*/
+    display: flex;
+}
+
+.skill-box{
+    /*background: lightblue;*/
+
+    /*Flex as child*/
+    /*flex-basis: 15rem;*/
+    /*Other Properties*/
+    
 }
 
 #projects{
-    height: 100vh;
+   background: turquoise;
 }
 
 #contact{
-    height: 100vh;
-    background-color: #f2f2f2;
+   background: gray;
 }
 
+
+
+
+
+
+
+
+/* Layout
+_______________________
+|__________nav_________|
+|                      |
+|                      |
+|         home         |
+|                      |
+|----------------------|
+|                      |
+|                      |
+|         about        |
+|                      |
+|----------------------|
+|                      |
+|                      |
+|         skills       |
+|                      |
+|----------------------|
+|                      |
+|                      |
+|       projects       |
+|                      |
+|----------------------|
+|                      |
+|                      |
+|        contact       |
+|                      |
+|______________________|
+*/
