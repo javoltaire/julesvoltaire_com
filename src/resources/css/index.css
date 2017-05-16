@@ -2,7 +2,11 @@
 :root{
     --back-color: #fafafa;
     --fore-color: #262626;
-    --accent-color: orange;
+    --inverse-fore-color: #ffffff;
+    --accent-color: #ffa500;
+    --hover-accent-color: #ee9a00;
+    --active-accent-color: #dd8f00;
+    --border-radius: 5px;
 }
 
 /*Hide the scrollbar*/
@@ -10,6 +14,8 @@
     display: none; 
 }
 
+/*Styling*/
+/*Elements*/
 html, body {
     /*Other properties*/
     padding: 0px;
@@ -26,6 +32,43 @@ body{
     flex-direction: column;
 }
 
+/*Classes*/
+.footer-icon{
+    color: var(--inverse-fore-color);
+    padding: 10px;
+}
+
+.footer-icon:hover{
+    border-width:0 0 5px 0;
+    border-style: solid;
+    border-color: var(--fore-color);
+    color: var(--inverse-fore-color);
+}
+
+/*ID's*/
+#footer{
+    /*Flex as parent*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Other Properties*/
+    background: var(--accent-color);
+    padding: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #navbar{
     background: greenyellow;
     /*Flex as child*/
@@ -41,14 +84,7 @@ body{
     align-items: center;
 }
 
-a{
-    text-decoration: none;
-    color: var(--fore-color);
-}
 
-a:hover{
-    color: var(--accent-color);
-}
 
 #logo{
 
@@ -182,11 +218,97 @@ a:hover{
 
 #projects{
    background: turquoise;
+   /*Flex as parent*/
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 #contact{
-   background: gray;
+    /*================ Change or Remove ===============*/
+    background: gray;
+
+   /*Flex as parent*/
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   /*Other properties*/
+   padding-bottom: 35px;
 }
+
+#contact-form{
+    /*================ Change or Remove ===============*/
+    background: red;
+
+    /*Flex as parent*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+
+    width: 250px;
+    
+}
+
+.form-group{
+    /*================ Change or Remove ===============*/
+    background: white;
+
+    /*Flex as parent*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.textbox{
+    outline: none;
+    border: 2px solid var(--fore-color);
+    padding: 5px;
+    border-radius: var(--border-radius);
+}
+
+.textbox:focus{
+    border: 2px solid var(--accent-color);
+}
+
+.btn-primary{
+    /*Flex as parent*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*Other properties*/
+    border-radius: var(--border-radius);
+
+    background: var(--accent-color);
+    color: var(--inverse-fore-color);
+    box-shadow: none;
+    border: 0;
+    width: 75px;
+    padding: 10px;
+}
+
+.btn-primary:hover{
+    background: var(--hover-accent-color);
+}
+
+.btn-primary:active{
+    background: var(--active-accent-color);
+}
+
+a{
+    text-decoration: none;
+    color: var(--fore-color);
+}
+
+a:hover{
+    color: var(--accent-color);
+}
+
+
+
+
 
 
 
