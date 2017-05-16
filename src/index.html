@@ -117,23 +117,11 @@
         <section id="contact">
             <h1 class="section-title">Contact</h1>
             <form id="contact-form">
-                <div class="form-group">
-                    <label>Name</label>
-                    <input class="textbox" name="name" placeholder="i.e. Jane Doe">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input class="textbox" name="email" placeholder="i.e. janedoe@email.com">
-                </div>
-                <div class="form-group">
-                    <label>Subject</label>
-                    <input class="textbox" name="subject" placeholder="Type in Subject here">
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea class="textbox" name="message" placeholder="Type in message here"></textarea>
-                </div>
-                <input class="btn-primary" name="submit" type="submit" value="Send">
+                <input class="textbox form-control" type="text" name="name" placeholder="Name">
+                <input class="textbox form-control" type="email" name="email" placeholder="Email">
+                <input class="textbox form-control" type="text" name="subject" placeholder="Subject">
+                <textarea class="textbox form-control" name="message" placeholder="Message"></textarea>
+                <input id="send-email-button" class="btn-primary form-control" name="submit" type="submit" value="Send">
             </form>
         </section>
         <footer id="footer">
