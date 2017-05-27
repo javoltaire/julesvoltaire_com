@@ -37,6 +37,15 @@ body{
     flex-direction: column;
 }
 
+a{
+    text-decoration: none;
+    color: var(--fore-color);
+}
+
+a:hover{
+    color: var(--accent-color);
+}
+
 /*Classes*/
 
 
@@ -50,15 +59,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-#navbar a{
-    text-decoration: none;
-    color: var(--fore-color);
-}
-
-#navbar a:hover{
-    color: var(--accent-color);
 }
 
 #logo{
@@ -100,11 +100,49 @@ body{
 }
 
 #content-wrapper{
-    /*Delete or change this*/
-    /*background: blue;*/
-
+    overflow-y: auto;
 
     flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#home{
+    flex-basis: 96vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-content{
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+
+}
+
+#home-content h1{
+    font-size: 300%;
+    color: var(--accent-color);
+}
+
+#home-content h3{
+    font-size: 125%;
+}
+
+#home-footer{
+    flex: 0 0 auto;
+    flex-basis: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*MEDIA QUERIES*/
