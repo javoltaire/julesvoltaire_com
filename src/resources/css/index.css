@@ -47,14 +47,24 @@ a:hover{
 }
 
 /*Classes*/
+.page-section{
+    display: flex;
+    flex-direction: column;
 
+}
+
+.section-title{
+    align-self: center;
+}
 
 /*ID's*/
+/*======================== NAVIGATION =======================*/
 #navbar{
     height: 50px;
-    border-style: solid;
+    /*border-style: solid;
     border-color: var(--fore-color);
-    border-width: 0 0 2px 0;
+    border-width: 0 0 2px 0;*/
+    min-height: var(--navbar-height);
 
     display: flex;
     justify-content: space-between;
@@ -98,18 +108,15 @@ a:hover{
 #socials{
     margin: 0 10px;
 }
-
+/*======================== CONTENT =======================*/
 #content-wrapper{
     overflow-y: auto;
 
     flex: 1 1 auto;
-
-    display: flex;
-    flex-direction: column;
 }
-
+/*======================== HOME SECTION =======================*/
 #home{
-    flex-basis: 96vh;
+    height: 96vh;
 
     display: flex;
     flex-direction: column;
@@ -145,6 +152,36 @@ a:hover{
     align-items: center;
 }
 
+/*======================== ABOUT SECTION =======================*/
+#about{
+    /*Change or remove this*/
+    background: pink;
+}
+
+#about-content{
+    /*Change or remove this*/
+    background: blue;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about-message{
+    /*CHange or remove htis*/
+    background: red;
+
+    margin: 0 20px;
+    max-width: 850px;
+    flex: 1;
+}
+
+#about-photo{
+    /*CHange or remove htis*/
+    background: yellow;;
+    flex: 0
+}
+
 /*MEDIA QUERIES*/
 /*Phones*/
 @media screen and (max-width: 580px){
@@ -166,6 +203,7 @@ a:hover{
     }
 
     /*ID's*/
+
     #navigation{
         position: relative;
     }
@@ -196,10 +234,16 @@ a:hover{
 
     #nav-menu-container li a:hover{
         background: var(--inverse-back-color);
+        color: var(--accent-color);
     }
 
     #socials{
         display: none;
+    }
+
+    /*======================== ABOUT SECTION  MOBILE=======================*/
+    #about-content{
+        flex-direction: column-reverse;
     }
 }
 
