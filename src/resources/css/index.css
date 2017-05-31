@@ -1,6 +1,7 @@
 /*Variables*/
 :root{
     --back-color: #fafafa;
+    --alt-back-color: lightgray;
     --fore-color: #262626;
     --inverse-fore-color: #fafafa;
     --inverse-back-color: #262626;
@@ -9,6 +10,7 @@
     --active-accent-color: #dd8f00;
     --hamburger-toggled-background: rgba(38, 38, 38, .96);
     --navbar-height: 50px;
+    --skill-item-size: 80px;
 }
 
 /*Hide the scrollbar*/
@@ -50,7 +52,6 @@ a:hover{
 .page-section{
     display: flex;
     flex-direction: column;
-
 }
 
 .section-title{
@@ -155,36 +156,64 @@ a:hover{
 /*======================== ABOUT SECTION =======================*/
 #about{
     /*Change or remove this*/
-    background: pink;
-}
-
-#about-content{
-    /*Change or remove this*/
-    background: blue;
+    background: var(--alt-back-color);
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 #about-message{
-    /*CHange or remove htis*/
-    background: red;
-
-    margin: 0 20px;
+    font-size: 18px;
     max-width: 850px;
+    padding: 50px;
+}
+
+/*======================== SKILLS SECTION =======================*/
+#skills{
+    display: flex;
+    flex-direction: column;
+}
+
+#skills-boxes-container{
+    display: flex;
+
+}
+
+.skills-category-box{
     flex: 1;
 }
 
-#about-photo{
-    /*CHange or remove htis*/
-    background: yellow;;
-    flex: 0
+.skills-box{
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.skills-box li{
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+    margin: 7px;
+    padding: 0 2px;
+
+    /*flex-basis: var(--skill-item-size);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.skills-box li label{
+    text-align: center;
+
 }
 
 /*MEDIA QUERIES*/
 /*Phones*/
-@media screen and (max-width: 580px){
+@media screen and (max-width: 720px){
     /*Classes*/
     .hamburger-button-toggled{
         background: var(--hamburger-toggled-background);
@@ -200,6 +229,10 @@ a:hover{
     .hamburger-menu-toggled{
         z-index: 1000;
         max-height: 200px;
+    }
+/*======================== ABOUT SECTION =================================*/
+    .skills-box{
+        justify-content: center;
     }
 
     /*ID's*/
@@ -242,8 +275,10 @@ a:hover{
     }
 
     /*======================== ABOUT SECTION  MOBILE=======================*/
-    #about-content{
-        flex-direction: column-reverse;
+
+    #about-message{
+        font-size: 16px;
+        padding: 20px;
     }
 }
 
