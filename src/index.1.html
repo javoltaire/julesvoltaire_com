@@ -11,23 +11,23 @@
     <link rel="stylesheet" href="../resources/css/index.css">
     <!--Javascripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../resources/js/index.js"></script>
+    <script src="resources/js/index.js"></script>
 </head>
 
 <body>
     <!--++++++++++++++++++++++++++++++++ NAVBAR +++++++++++++++++++++++++++++++++-->
     <nav id="navbar">
-        <div id="mobile-bar">
-            <a id="logo-image" href="#"><img height="40px" width="40px" src=""></a>
+        <a href="#"><img id="logo-image" src=""></a>
+        <div id="navigation">
             <div id="hamburger-button"><i id="hamburger" class="fa fa-bars fa-lg"></i></div>
+            <ul id="nav-menu-container" class="nav-menu-container">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <ul id="nav-menu-container" class="nav-menu-container">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
         <div id="socials">
             <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
             <a href="#"><i class="fa fa-github fa-lg"></i></a>
@@ -37,7 +37,7 @@
     <!--++++++++++++++++++++++++++++++++ CONTENT +++++++++++++++++++++++++++++++++-->
     <div id="content">
         <!--=================================== HOME SECTION ===========================================-->
-        <section id="home" class="nav-section">
+        <section id="home">
             <div id="home-content">
                 <h1>Jules Voltaire</h1>
                 <h3>Software Engineer</h3>
@@ -114,30 +114,25 @@
                 <label><input type="radio" name="project-types" value="mobile">Mobile</label>
                 <label><input type="radio" name="project-types" value="other">Other</label>
             </form>
-
-            <!--<div id="projects-container-wrapper">-->
-                <div id="projects-container">
-                    <div class="project">Project 1</div>
-                    <div class="project">Project 2</div>
-                    <div class="project">Project 3</div>
-                    <div class="project">Project 4</div>
-                    <div class="project">Project 5</div>
-                    <div class="project">Project 6</div>
-                    <div class="project">Project 7</div>
-                    <div class="project">Project 8</div>
-                    <div class="project">Project 9</div>
-                    <div class="project">Project 10</div>
-                </div>
-            <!--</div>-->
+            <div id="project-container">
+                <div class="project">Project 1</div>
+                <div class="project">Project 2</div>
+                <div class="project">Project 3</div>
+                <div class="project">Project 4</div>
+                <div class="project">Project 5</div>
+                <div class="project">Project 6</div>
+                <div class="project">Project 7</div>
+                <div class="project">Project 8</div>
+                <div class="project">Project 9</div>
+                <div class="project">Project 10</div>
+            </div>
         </section>
         <!--=================================== CONTACT SECTION ===========================================-->
         <section id="contact">
             <h1 class="section-title">Contact</h1>
             <form id="contact-form">
-                <div id="user-ct-info-box">
-                    <input class="textbox form-control" type="text" name="name" placeholder="Name">
-                    <input class="textbox form-control" type="email" name="email" placeholder="Email">
-                </div>
+                <input class="textbox form-control" type="text" name="name" placeholder="Name">
+                <input class="textbox form-control" type="email" name="email" placeholder="Email">
                 <input class="textbox form-control" type="text" name="subject" placeholder="Subject">
                 <textarea class="textbox form-control" name="message" placeholder="Message"></textarea>
                 <input id="send-email-button" class="btn-primary form-control" name="submit" type="submit" value="Send">

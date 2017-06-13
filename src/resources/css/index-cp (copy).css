@@ -1,0 +1,277 @@
+/*Variables*/
+:root{
+    
+    --alt-back-color: lightgray;
+
+    --inverse-fore-color: #fafafa;
+    --inverse-back-color: #262626;
+    --accent-color: #ffa500;
+    --hover-accent-color: #ee9a00;
+    --active-accent-color: #dd8f00;
+    --hamburger-toggled-background: rgba(38, 38, 38, .96);
+    --navbar-height: 50px;
+    --skill-item-size: 80px;
+}
+
+/*Hide the scrollbar*/
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+/*Styling*/
+/*Elements*/
+
+
+
+
+body{
+    /*Flex as parent*/
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: var(--fore-color);
+}
+
+a:hover{
+    color: var(--accent-color);
+}
+
+/*Classes*/
+.page-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title{
+    align-self: center;
+}
+
+/*ID's*/
+/*======================== NAVIGATION =======================*/
+#navbar{
+    height: 50px;
+    /*border-style: solid;
+    border-color: var(--fore-color);
+    border-width: 0 0 2px 0;*/
+    min-height: var(--navbar-height);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(38, 38, 38, .90);
+    color: white;
+}
+
+#logo{
+    margin: 0 10px;
+}
+
+#navigation{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#hamburger-button{
+    cursor: pointer;
+    width: var(--navbar-height);
+
+    display: none;
+    flex-basis: var(--navbar-height);
+    justify-content: center;
+    align-items: center;
+}
+
+#hamburger-button:hover{
+    color: var(--accent-color);
+    background: var(--inverse-back-color);
+}
+
+#nav-menu-container{
+    list-style-type: none;
+
+    width: 325px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#socials{
+    margin: 0 10px;
+}
+/*======================== CONTENT =======================*/
+#content-wrapper{
+    overflow-y: auto;
+
+    flex: 1 1 auto;
+}
+/*======================== HOME SECTION =======================*/
+#home{
+    height: 96vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-content{
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+
+}
+
+#home-content h1{
+    font-size: 300%;
+    color: var(--accent-color);
+}
+
+#home-content h3{
+    font-size: 125%;
+}
+
+#home-footer{
+    flex: 0 0 auto;
+    flex-basis: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*======================== ABOUT SECTION =======================*/
+#about{
+    /*Change or remove this*/
+    background: var(--alt-back-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-message{
+    font-size: 18px;
+    max-width: 850px;
+    padding: 50px;
+}
+
+/*======================== SKILLS SECTION =======================*/
+#skills{
+    display: flex;
+    flex-direction: column;
+}
+
+#skills-boxes-container{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.skills-category-box{
+    /*flex: 0.5;*/
+}
+
+.skills-box{
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.skills-box li{
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+    margin: 7px;
+    padding: 0 2px;
+
+    /*flex-basis: var(--skill-item-size);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
+.skills-box li label{
+    text-align: center;
+
+}
+
+/*MEDIA QUERIES*/
+/*Phones*/
+@media screen and (max-width: 720px){
+    /*Classes*/
+    .hamburger-button-toggled{
+        background: var(--hamburger-toggled-background);
+        color: var(--inverse-fore-color);
+    }
+
+    .nav-menu-container{
+        max-height: 0;
+        transition: max-height 0.8s; 
+        z-index: -1000;
+    }
+
+    .hamburger-menu-toggled{
+        z-index: 1000;
+        max-height: 200px;
+    }
+/*======================== ABOUT SECTION =================================*/
+    .skills-box{
+        justify-content: center;
+    }
+
+    /*ID's*/
+
+    #navigation{
+        position: relative;
+    }
+    #hamburger-button{
+        display: flex;
+    }
+
+    #nav-menu-container{
+        background: var(--hamburger-toggled-background);
+        position: absolute;
+        top: var(--navbar-height);
+        width: 100vw;
+        flex-direction: column;
+    }
+
+    #nav-menu-container li{
+        flex-basis: 40px; 
+        display: flex;  
+    }
+
+    #nav-menu-container li a{
+        width: 100%;
+        padding-left: 10px;
+        color: var(--inverse-fore-color);
+        display: flex;
+        align-items: center;
+    }
+
+    #nav-menu-container li a:hover{
+        background: var(--inverse-back-color);
+        color: var(--accent-color);
+    }
+
+    #socials{
+        display: none;
+    }
+
+    /*======================== ABOUT SECTION  MOBILE=======================*/
+
+    #about-message{
+        font-size: 16px;
+        padding: 20px;
+    }
+}

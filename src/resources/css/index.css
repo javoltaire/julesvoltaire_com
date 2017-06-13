@@ -1,42 +1,31 @@
-/*Variables*/
-:root{
-    --back-color: #fafafa;
-    --alt-back-color: lightgray;
-    --fore-color: #262626;
-    --inverse-fore-color: #fafafa;
-    --inverse-back-color: #262626;
-    --accent-color: #ffa500;
-    --hover-accent-color: #ee9a00;
-    --active-accent-color: #dd8f00;
-    --hamburger-toggled-background: rgba(38, 38, 38, .96);
-    --navbar-height: 50px;
-    --skill-item-size: 80px;
-}
-
-/*Hide the scrollbar*/
-::-webkit-scrollbar { 
+::-webkit-scrollbar,
+::-moz-scrollbar
+{ 
     display: none; 
 }
 
-/*Styling*/
-/*Elements*/
+/*============ Variables ============;*/
+:root{
+    --back-color: #fafafa;
+    --fore-color: #262626;
+    --inverse-fore-color: #fafafa;
+    --accent-color: #ffa500;
+
+    --navbar-height: 50px;
+}
+
+/*======================== BODY ============================*/
+/*----------- Elements ----------*/
 *{
     margin: 0px;
     padding: 0px;
 }
 
 html, body {
-    /*Other properties*/
     height: 100%;
     font-family: "Helvetica", "Arial", "sans-serif";
     background: var(--back-color);
     color: var(--fore-color);
-}
-
-body{
-    /*Flex as parent*/
-    display: flex;
-    flex-direction: column;
 }
 
 a{
@@ -48,76 +37,75 @@ a:hover{
     color: var(--accent-color);
 }
 
-/*Classes*/
-.page-section{
-    display: flex;
-    flex-direction: column;
-}
-
-.section-title{
-    align-self: center;
-}
-
-/*ID's*/
-/*======================== NAVIGATION =======================*/
+/*======================== NAVIGATION BAR=======================*/
+/*----------- ID's ----------*/
 #navbar{
-    height: 50px;
-    /*border-style: solid;
-    border-color: var(--fore-color);
-    border-width: 0 0 2px 0;*/
-    min-height: var(--navbar-height);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--navbar-height);
 
+    /*Flex parent properties*/
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#logo{
-    margin: 0 10px;
-}
+#mobile-bar{
+    /*FLex child properties*/
+    align-self: stretch;
 
-#navigation{
-    position: relative;
+    /*Flex parent Properties*/
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 #hamburger-button{
     cursor: pointer;
+
+    /*Flex child properties*/
     width: var(--navbar-height);
 
+    /*Flex parent properties*/
     display: none;
-    flex-basis: var(--navbar-height);
     justify-content: center;
     align-items: center;
 }
 
 #hamburger-button:hover{
     color: var(--accent-color);
-    background: var(--inverse-back-color);
 }
 
 #nav-menu-container{
     list-style-type: none;
 
-    width: 325px;
+    /*Flex child properties*/
+    flex-basis: 350px;
+
+    /*Flex parent properties*/
+    display: flex;
+    justify-content: space-around;
+}
+
+#socials{
+    /*Flex child properties*/
+    flex-basis: 75px;
+
+    /*Flex parent properties*/
     display: flex;
     justify-content: space-between;
 }
 
-#socials{
-    margin: 0 10px;
-}
 /*======================== CONTENT =======================*/
-#content-wrapper{
-    overflow-y: auto;
-
-    flex: 1 1 auto;
+#content{
+    /*Change or remove this*/
+    /*background: blue;*/
 }
-/*======================== HOME SECTION =======================*/
+
+/***************** HOME SECTION ********************/
 #home{
-    height: 96vh;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -141,10 +129,12 @@ a:hover{
 }
 
 #home-content h3{
-    font-size: 125%;
+    font-size: 150%;
 }
 
 #home-footer{
+    font-size: 14px;
+
     flex: 0 0 auto;
     flex-basis: 50px;
 
@@ -153,135 +143,214 @@ a:hover{
     align-items: center;
 }
 
-/*======================== ABOUT SECTION =======================*/
+/***************** ABOUT SECTION ********************/
 #about{
     /*Change or remove this*/
-    background: var(--alt-back-color);
+    background: red;
 
+    padding-top: var(--navbar-height);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-message{
+    font-size: 19px;
+    max-width: 850px;
+    padding: 50px;
+}
+
+/***************** SKILLS SECTION ********************/
+#skills{
+    /*Change or remove this*/
+    background: blue;
+
+    padding-top: var(--navbar-height);
+
+    /*Flex parent properties*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skills-boxes-container{
+    /*Change or remove this*/
+    background: green;
+    width: 400px;
+    
+    /*Flex parent properties*/
+    display: flex;
+}
+
+.skills-category-box{
+    /*Change or remove this*/
+    background: brown;
+
+    /*Flex child properties*/
+    flex: 1;
+
+    /*Flex parent properties*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-box{
+    /*Change or remove this*/
+    background: pink;
+
+    list-style-type: none;
+
+    /*Flex parent properties*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/***************** PROJECTS SECTION ********************/
+#projects{
+    /*Change or remove this*/
+    background: green;
+
+    padding-top: var(--navbar-height);
+
+    /*Flex parent properties*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects-container{
+    /*Change or remove this*/
+    background: pink;
+
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*align-content: center;*/
+}
+
+.project{
+    /*Change or remove this*/
+    background: lightblue;
+    width: 400px;
+    height: 200px;
+
+    margin: 10px;
+}
+
+
+/***************** CONTACT SECTION ********************/
+#contact{
+    /*Change or remove this*/
+    background: purple;
+
+    padding: var(--navbar-height) 0;
+
+    /*Flex parent properties*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form{
+    /*Remove or change this*/
+    background: red;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#user-ct-info-box{
+    /*Change or Remove this*/
+    background: blue;
+
+    display: flex;
+}
+
+#user-ct-info-box *{
+    flex: 1;
+}
+
+
+
+/***************** FOOTER ********************/
+#footer{
+    background: var(--accent-color);
+    height: 75px;
+
+    /*Flex parent properties*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#about-message{
-    font-size: 18px;
-    max-width: 850px;
-    padding: 50px;
+.footer-icon{
+    color: var(--inverse-fore-color);
+    font-size: 25px;
+    padding-bottom: 4px;
+    margin: 0 10px;
 }
 
-/*======================== SKILLS SECTION =======================*/
-#skills{
-    display: flex;
-    flex-direction: column;
+.footer-icon:hover{
+    color: var(--inverse-fore-color);
+    border-color: var(--fore-color);
+    border-width: 0 0 5px 0;
+    border-style: solid;
 }
 
-#skills-boxes-container{
-    display: flex;
 
-}
-
-.skills-category-box{
-    flex: 1;
-}
-
-.skills-box{
-    list-style-type: none;
-
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
-.skills-box li{
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    border-radius: 5px;
-    margin: 7px;
-    padding: 0 2px;
-
-    /*flex-basis: var(--skill-item-size);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
-}
-
-.skills-box li label{
-    text-align: center;
-
-}
-
-/*MEDIA QUERIES*/
-/*Phones*/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++ MOBILE STYLING ++++++++++++++++++++++++++++++++++++++++++++*/
 @media screen and (max-width: 720px){
-    /*Classes*/
-    .hamburger-button-toggled{
-        background: var(--hamburger-toggled-background);
-        color: var(--inverse-fore-color);
+    #navbar{
+        /*Flex parent properties*/
+        flex-direction: column;
+        align-items: stretch;
+
     }
 
-    .nav-menu-container{
-        max-height: 0;
-        transition: max-height 0.8s; 
-        z-index: -1000;
+    #mobile-bar{
+        min-height: var(--navbar-height);
     }
 
-    .hamburger-menu-toggled{
-        z-index: 1000;
-        max-height: 200px;
-    }
-/*======================== ABOUT SECTION =================================*/
-    .skills-box{
-        justify-content: center;
-    }
-
-    /*ID's*/
-
-    #navigation{
-        position: relative;
-    }
     #hamburger-button{
         display: flex;
     }
 
     #nav-menu-container{
-        background: var(--hamburger-toggled-background);
-        position: absolute;
-        top: var(--navbar-height);
-        width: 100vw;
+        /*Flex child properties*/
+        flex-basis: 250px;
+
+        /*Flex parent properties*/
         flex-direction: column;
-    }
-
-    #nav-menu-container li{
-        flex-basis: 40px; 
-        display: flex;  
-    }
-
-    #nav-menu-container li a{
-        width: 100%;
-        padding-left: 10px;
-        color: var(--inverse-fore-color);
-        display: flex;
         align-items: center;
     }
 
-    #nav-menu-container li a:hover{
-        background: var(--inverse-back-color);
-        color: var(--accent-color);
-    }
-
     #socials{
-        display: none;
+        flex-basis: 40px;
     }
 
-    /*======================== ABOUT SECTION  MOBILE=======================*/
+    #socials a{
+        /*Flex child properties*/
+        flex: 1;
 
-    #about-message{
-        font-size: 16px;
-        padding: 20px;
+        /*Flex parent properties*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #socials a:hover{
+        background: lightcoral;
     }
 }
 
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++ 4K STYLING ++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 
@@ -298,62 +367,15 @@ a:hover{
 
 
 
+/*vvvvvvvvvvvvvvvvvvvvvvvvv DELETE THIS STUFF vvvvvvvvvvvvvvvvvvvvvvvvvv*/
+#travel-map{
+    background: lightgreen;
+    width: 80%;
+    max-width: 1280px;
+    height: 720px;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Layout
-_______________________
-|__________nav_________|
-|                      |
-|                      |
-|         home         |
-|                      |
-|----------------------|
-|                      |
-|                      |
-|         about        |
-|                      |
-|----------------------|
-|                      |
-|                      |
-|         skills       |
-|                      |
-|----------------------|
-|                      |
-|                      |
-|       projects       |
-|                      |
-|----------------------|
-|                      |
-|                      |
-|        contact       |
-|                      |
-|______________________|
-*/
+}
