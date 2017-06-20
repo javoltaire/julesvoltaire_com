@@ -211,9 +211,6 @@ a:hover{
 
 /***************** PROJECTS SECTION ********************/
 #projects{
-    /*Change or remove this*/
-    background: green;
-
     padding-top: var(--navbar-height);
 
     /*Flex parent properties*/
@@ -223,9 +220,6 @@ a:hover{
 }
 
 #projects-container{
-    /*Change or remove this*/
-    background: pink;
-
     padding: 10px;
 
     display: flex;
@@ -234,11 +228,15 @@ a:hover{
     /*align-content: center;*/
 }
 
+/*----------- Classes ----------*/
 .project{
     /*Change or remove this*/
-    background: lightblue;
+    background: lightgray;
     width: 400px;
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     margin: 10px;
 }
@@ -246,9 +244,6 @@ a:hover{
 
 /***************** CONTACT SECTION ********************/
 #contact{
-    /*Change or remove this*/
-    background: purple;
-
     padding: var(--navbar-height) 0;
 
     /*Flex parent properties*/
@@ -258,18 +253,21 @@ a:hover{
 }
 
 #contact-form{
-    /*Remove or change this*/
-    background: red;
-    padding: 20px;
+    padding: 10px;
 
+    /*Flex child properties*/
+    flex-basis: 350px;
+
+    /*Flex parent properties*/
     display: flex;
     flex-direction: column;
 }
 
-#user-ct-info-box{
-    /*Change or Remove this*/
-    background: blue;
+#contact-form input{
+    height: 35px;
+}
 
+#user-ct-info-box{
     display: flex;
 }
 
@@ -277,6 +275,30 @@ a:hover{
     flex: 1;
 }
 
+#message-tb{
+    width: 1000px;
+    
+    /*Flex child properties*/
+    flex: 1;
+}
+
+#send-email-btn{
+    width: 100px;
+    align-self: center;
+}
+
+/*----------- Classes ----------*/
+.form-control{
+    margin: 10px;
+    background: #efefef;
+    border: 0;
+    box-shadow:none;
+}
+
+.btn-primary{
+    color: var(--inverse-fore-color);
+    background: var(--accent-color);
+}
 
 
 /***************** FOOTER ********************/
@@ -303,6 +325,25 @@ a:hover{
     border-width: 0 0 5px 0;
     border-style: solid;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++ MOBILE STYLING ++++++++++++++++++++++++++++++++++++++++++++*/
